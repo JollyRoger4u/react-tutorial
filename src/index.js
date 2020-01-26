@@ -4,12 +4,13 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import MyInfo from './tutorial/test1'
+import SearchField from './assignment/search'
 
 ReactDOM.render(
-    <MyInfo />, document.getElementById("root"))
+    <MyInfo />, document.getElementById("root"));
 
-
-
+ReactDOM.render(
+    <SearchField />, document.getElementById("search"));
 //ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
