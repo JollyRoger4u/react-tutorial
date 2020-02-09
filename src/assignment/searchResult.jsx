@@ -8,6 +8,7 @@ class SearchResult extends React.Component {
                 {this.props.singleEntry.name}
                 <br />
                 {this.props.singleEntry.job}
+                <p>git test</p>
             </li>
 
         )
