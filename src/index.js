@@ -5,8 +5,9 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import MyInfo from './tutorial/test1'
 import SearchField from './assignment/search'
-import LocalStorageTest from './tutorial/localstoragetest';
-
+//import LocalStorageTest from './tutorial/localstoragetest';
+import logo from "./logo.svg"
+let counter = 0;
 class LandingHeader extends Component {
 
     render() {
@@ -14,6 +15,7 @@ class LandingHeader extends Component {
         let noDataMsg = "no data in storage"
         let dataFoundMsg = "Storage found, contains: "
         let actualMsg;
+        //let iconOfDoom = "./pub"
         if (!localData) {
             actualMsg = noDataMsg;
         } else {
@@ -21,14 +23,20 @@ class LandingHeader extends Component {
         }
         return (
             <div>
+                <SearchField />
                 <p>{`${actualMsg}`}</p>
                 <h1>Grrr</h1>
                 <MyInfo />
+                <img src={logo} onClick={logoClick} className="mainLogo" alt=""></img>
+                <h1>{counter}</h1>
             </div>
         );
     }
 }
+function logoClick() {
+    counter++;
 
+}
 ReactDOM.render(
     <LandingHeader />, document.getElementById("root"));
 
